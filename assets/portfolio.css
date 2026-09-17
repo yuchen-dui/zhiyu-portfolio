@@ -300,3 +300,14 @@ html,body{margin:0;min-width:320px;background:var(--portfolio-paper);color:var(-
 @media(max-width:570px){#spatial-portfolio .kitchen-entry{padding:25px;flex-direction:column;align-items:flex-start;gap:20px}}
 @media(prefers-reduced-motion:reduce){#spatial-portfolio .kitchen-entry:hover{transform:none}}
 #spatial-portfolio[data-motion="off"] .kitchen-entry:hover{transform:none}
+
+/* Online review demo entry, shared by hosted and offline exports. */
+#spatial-portfolio .review-demo-card{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px;margin:20px 0;background:#edf3f9;border:1px solid #cbd9e8;border-radius:10px}
+#spatial-portfolio .review-demo-card strong{font-size:17px;color:#344f6e}
+#spatial-portfolio .review-demo-card p{margin:8px 0 0;font-size:13px;color:#647b96}
+#spatial-portfolio .review-demo-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border-radius:7px;background:#536f8e;color:#fff;text-decoration:none;transition:background .18s,transform .18s}
+#spatial-portfolio .review-demo-link:hover{background:#405b79;transform:translateY(-2px)}
+#spatial-portfolio .review-demo-link:focus-visible{outline:3px solid #819bb8;outline-offset:3px}
+#spatial-portfolio .review-demo-card small{display:block;margin-top:8px;font-size:11px;color:#647b96}
+@media(max-width:570px){#spatial-portfolio .review-demo-card{align-items:flex-start;flex-direction:column}#spatial-portfolio .v4-brief nav{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){#spatial-portfolio .review-demo-link{transition:none}#spatial-portfolio .review-demo-link:hover{transform:none}}
