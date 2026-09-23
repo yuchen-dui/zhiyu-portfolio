@@ -311,3 +311,50 @@ html,body{margin:0;min-width:320px;background:var(--portfolio-paper);color:var(-
 #spatial-portfolio .review-demo-card small{display:block;margin-top:8px;font-size:11px;color:#647b96}
 @media(max-width:570px){#spatial-portfolio .review-demo-card{align-items:flex-start;flex-direction:column}#spatial-portfolio .v4-brief nav{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){#spatial-portfolio .review-demo-link{transition:none}#spatial-portfolio .review-demo-link:hover{transform:none}}
+
+/* Public example: split illustrates isolation, not sample proportions. */
+#spatial-portfolio .v2-split button{flex:1}#spatial-portfolio .v2-split button+button{flex:1}
+#spatial-portfolio .v2-split strong{font-size:24px}
+
+/* V5: four project entries, interactive evaluation diagrams. */
+#spatial-portfolio .sp-index{grid-template-columns:repeat(2,minmax(0,1fr))}
+#spatial-portfolio .sp-index>button{padding:24px;border-right:1px solid var(--sp-line);border-bottom:1px solid var(--sp-line)}
+#spatial-portfolio .sp-index>button:nth-child(2n){border-right:0}
+#spatial-portfolio .sp-index>button:nth-last-child(-n+2){border-bottom:0}
+#spatial-portfolio .sp-stage{height:480px}
+#spatial-portfolio .sp-showcase{height:560px}
+#spatial-portfolio [data-plate="3"] .sp-plate-title{font-size:23px}
+#spatial-portfolio .eval-note{padding:16px 20px;margin:22px 0;border-left:2px solid #91a4b5;background:#edf2f6;color:#526376;font-size:14px;line-height:1.8}
+#spatial-portfolio .eval-note p{margin:4px 0 0}
+#spatial-portfolio .eval-subtitle{font-size:19px;line-height:1.6;color:#344d62;margin:30px 0 12px}
+#spatial-portfolio .eval-boundary{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+#spatial-portfolio .eval-boundary>div{border-top:2px solid #97aab8;padding:16px;background:#f0f4f7}
+#spatial-portfolio .eval-boundary b{font-weight:550;color:#31495d}
+#spatial-portfolio .eval-boundary p{margin:8px 0 0;font-size:14px}
+#spatial-portfolio .eval-steps{padding:22px 28px 30px;display:flex;flex-direction:column;gap:16px}
+#spatial-portfolio .eval-node{position:relative;display:flex;align-items:center;gap:16px;width:100%;text-align:left;min-width:0;min-height:74px;padding:16px 20px;border:1px solid #cbd6de!important;border-radius:9px;background:#f9fbfc;color:#384e62;box-shadow:0 4px 14px #31445a06;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+#spatial-portfolio .eval-node>span:last-child{min-width:0}
+#spatial-portfolio .eval-node strong{display:block;font-size:16px;font-weight:550;line-height:1.6}
+#spatial-portfolio .eval-node small{display:block;font-size:12px;line-height:1.6;color:#60778a;margin-top:3px}
+#spatial-portfolio .eval-node:hover{transform:translateX(3px);box-shadow:0 5px 15px #31445a10}
+#spatial-portfolio .eval-node[aria-pressed="true"]{background:#e9f0f4;border-color:#7d97a8!important;box-shadow:inset 3px 0 #7d97a8}
+#spatial-portfolio .eval-node:focus-visible{outline:3px solid #7693ab;outline-offset:4px}
+#spatial-portfolio .eval-step{display:grid;place-items:center;flex:0 0 34px;height:34px;border-radius:50%;border:1px solid #bbcbd5;font:12px/1 monospace;color:#536e83;background:#fff}
+#spatial-portfolio .eval-flow .eval-node:not(:last-child):after,#spatial-portfolio .eval-handoff .eval-node:not(:last-child):after{content:'↓';position:absolute;bottom:-18px;left:32px;color:#718ba0;font-size:14px;z-index:1}
+#spatial-portfolio .eval-flow .eval-steps{counter-reset:step}
+#spatial-portfolio .eval-risk .eval-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#spatial-portfolio .eval-risk .eval-node{align-items:flex-start;min-height:120px;flex-direction:column;gap:12px}
+#spatial-portfolio .eval-risk .eval-step{height:28px;flex-basis:28px;width:28px;border-radius:6px}
+#spatial-portfolio .eval-handoff .eval-node:nth-child(3){border-style:dashed!important;background:#eff4f4}
+#spatial-portfolio .eval-handoff .eval-node:nth-child(3) .eval-step{border-radius:4px;background:#e3ecec}
+#spatial-portfolio .eval-cycle .eval-steps{padding-left:48px;border-left:1px solid #cad6de;margin:12px 28px 0;padding-right:0}
+#spatial-portfolio .eval-cycle .eval-node:before{content:'';position:absolute;left:-49px;top:50%;width:48px;border-top:1px solid #cad6de}
+#spatial-portfolio .eval-return{margin:0 28px 24px!important;border:1px dashed #a4b6c2;border-radius:7px;padding:12px;font-size:13px!important;color:#526e83}
+#spatial-portfolio .eval-figure .v2-details{min-height:155px}
+#spatial-portfolio .eval-figure .v2-detail{padding-right:0}
+#spatial-portfolio[data-motion="off"] .eval-node{transition:none}
+#spatial-portfolio[data-motion="off"] .eval-node:hover{transform:none}
+@media(max-width:800px){#spatial-portfolio .sp-stage{height:410px}#spatial-portfolio .sp-showcase{height:490px}#spatial-portfolio [data-plate="3"] .sp-plate-title{font-size:18px}#spatial-portfolio .eval-mindmap .mm-trunk{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:570px){#spatial-portfolio .sp-index{grid-template-columns:1fr}#spatial-portfolio .sp-index>button{border-right:0}#spatial-portfolio .sp-index>button:nth-last-child(2){border-bottom:1px solid var(--sp-line)}#spatial-portfolio .eval-steps{padding:18px}#spatial-portfolio .eval-node{padding:14px 12px;gap:12px}#spatial-portfolio .eval-node strong{font-size:15px}#spatial-portfolio .eval-risk .eval-steps{grid-template-columns:1fr}#spatial-portfolio .eval-risk .eval-node{min-height:0;flex-direction:row;align-items:center}#spatial-portfolio .eval-flow .eval-node:not(:last-child):after,#spatial-portfolio .eval-handoff .eval-node:not(:last-child):after{left:24px}#spatial-portfolio .eval-cycle .eval-steps{margin:12px 18px 0;padding-left:20px}#spatial-portfolio .eval-cycle .eval-node:before{left:-21px;width:20px}#spatial-portfolio .eval-return{margin-left:18px!important;margin-right:18px!important}#spatial-portfolio .eval-boundary{grid-template-columns:1fr}#spatial-portfolio .eval-figure .v2-details{min-height:0}}
+@media(prefers-reduced-motion:reduce){#spatial-portfolio .eval-node{transition:none}#spatial-portfolio .eval-node:hover{transform:none}}
+@media print{#spatial-portfolio .eval-figure .v2-detail{display:block!important;margin-top:12px}#spatial-portfolio .eval-figure{break-inside:auto}#spatial-portfolio .eval-node{break-inside:avoid}}
